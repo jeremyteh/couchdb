@@ -1,0 +1,173 @@
+swagger: "2.0"
+info:
+  description: "This API utility is designed to showcase the core CRUD functions of CouchDB database adapted from Couch DB Core API page. For more information on CouchDB HTTP API reference, please visit: http://docs.couchdb.org/en/2.1.0/http-api.html"
+  version: "2.1.0"
+  title: "CouchDB API"
+host: "localhost:5984"
+basePath: "/"
+tags:
+- name: "database"
+  description: "CouchDB database operations"
+- name: "document"
+  description: "CouchDB document operations"
+schemes:
+- "http"
+paths:
+  /_all_dbs:
+    get:
+      tags:
+      - "database"
+      summary: "Retrieve all the databases from CouchDB"
+      description: ""
+      operationId: "retrievedb"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Successful Operation"
+  /{db}:
+    put:
+      tags:
+      - "database"
+      summary: "Insert a database into CouchDB"
+      description: "This can only be done by a logged in user. Use your credentials for CouchDB Fauxton with admin permission"
+      operationId: "createdb"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "db"
+        in: "path"
+        description: "database name"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful Operation"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+        404:
+          description: "Database name not found"
+      security:
+        - basicAuth: []
+    delete:
+      tags:
+      - "database"
+      summary: "Deletes a database from CouchDB"
+      description: "This can only be done by a logged in user. Use your credentials for CouchDB Fauxton with admin permission"
+      operationId: "deletedb"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "db"
+        in: "path"
+        description: "database name"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful Operation"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+        404:
+          description: "Database name not found"
+      security:
+        - basicAuth: []
+  
+  /{db}/_all_docs:
+    get:
+      tags:
+      - "document"
+      summary: "Retrieve all the documents from a database in CouchDB"
+      description: ""
+      operationId: "retrievedoc"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "db"
+        in: "path"
+        description: "database name"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful Operation"
+  
+  /{db}/{document_id}/-d:
+    put:
+      tags:
+      - "document"
+      summary: "Insert a document into a database in CouchDB"
+      description: "This can only be done by a logged in user. Use your credentials for CouchDB Fauxton with admin permission"
+      operationId: "createdocument"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "db"
+        in: "path"
+        description: "database name"
+        required: true
+        type: "string"
+      - name: "document_id"
+        in: "path"
+        description: "document id"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful Operation"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+        404:
+          description: "Database/Document name not found"
+      security:
+        - basicAuth: []
+    
+  
+  /{db}/{document_id}/?rev={document_rev_no}:
+    delete:
+      tags:
+      - "document"
+      summary: "Deletes a document from a database in CouchDB"
+      description: "This can only be done by a logged in user. Use your credentials for CouchDB Fauxton with admin permission"
+      operationId: "deletedocument"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "db"
+        in: "path"
+        description: "database name"
+        required: true
+        type: "string"
+      - name: "document_id"
+        in: "path"
+        description: "document id"
+        required: true
+        type: "string"
+      - name: "document_rev_no"
+        in: "path"
+        description: "document revision number"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful Operation"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+        404:
+          description: "Database/Document name not found"
+      security:
+        - basicAuth: []
+securityDefinitions:
+  basicAuth:
+    type: basic
+externalDocs:
+  description: "This API utility is developed with Swagger API Tooling Open Source Framework. To find out more, Click here!"
+  url: "http://swagger.io"
