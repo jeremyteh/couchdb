@@ -9,12 +9,14 @@
 
 ## CouchDB Learning Portal
 
-![]
+![CouchDB Learning Portal](https://raw.githubusercontent.com/jeremyteh/couchdb/master/img/CouchDBLearningPortal.JPG)
+
+![CouchDB Learning Portal](https://raw.githubusercontent.com/jeremyteh/couchdb/master/img/CouchDBSwaggerHttpApi.JPG)
 
 Welcome to our CouchDB Learning Portal. This application is developed and aimed at educating people with the basic understanding of CRUD operations of CouchDB and visualize how these operations are carried out on a document database like CouchDB
 
 The execises in this Demo Application includes:
-* Learn COuch DB HTTP API with Swagger
+* Learn CouchDB HTTP API with Swagger
 * Retrieve all the databases in CouchDB
 * Create and insert a database into CouchDB
 * Delete a database in CouchDB
