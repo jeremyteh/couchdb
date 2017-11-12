@@ -9,9 +9,12 @@
 
 ## CouchDB Learning Portal
 
+![]
+
 Welcome to our CouchDB Learning Portal. This application is developed and aimed at educating people with the basic understanding of CRUD operations of CouchDB and visualize how these operations are carried out on a document database like CouchDB
 
 The execises in this Demo Application includes:
+* Learn COuch DB HTTP API with Swagger
 * Retrieve all the databases in CouchDB
 * Create and insert a database into CouchDB
 * Delete a database in CouchDB
@@ -20,14 +23,14 @@ The execises in this Demo Application includes:
 * Update a personal particulars document in CouchDB
 * Delete a personal particulars document in CouchDB
 
+We hope you like our CouchDB Learning Portal and hope you have a great learning experience.
+
 ## Getting started with learning with our CouchDB Learning Portal
 
 ### Prerequisites
 
 * Apache CouchDB
 * XAMPP Server
-* Node 6.X
-* NPM 3.X
 
 ### Steps
 
@@ -37,9 +40,13 @@ The execises in this Demo Application includes:
 4. Go to [Project Fauxton UI- Verify Installer](http://localhost:5984/_utils/#/verifyinstall), Click on the verify installation button make sure all tick means it is installed properly
 5. Go to [Project Fauxton UI- Setup](http://localhost:5984/_utils/#/setup), click 'configure a single node' enter your credentials, just enter your username & password. Your CouchDB is configured successfully.
 6. Go to [Apache XAMPP Server Downlaod Page](https://www.apachefriends.org/index.html). Install XAMPP Server. Run XAMPP Control Panel
-7. Go to [Node.js 6.x Download Page for Previous Releases](https://nodejs.org/dist/latest-v6.x/node-v6.12.0-x64.msi). Download and complete the installation. Node.js and npm shoudl be successfully installed. Restart your computer.
-8. [Fork this](http://github.com/jeremyteh/couchdb.git) repo and clone to your file system
-9. Under your file project directory naviagte to 
+8. [Fork this](http://github.com/jeremyteh/couchdb.git) repo and clone to your file system under your local drive -> XAMPP folder -> htdocs
+9. Open with Mozilla Firefox or Internet Explorer, you are ready to learn!
+
+### To Note:
+
+* Use Mozilla Firefox or Internet Explorer to run our program
+* Swagger is an open source API tooling framework which is used in this project to display CouchDB API. The validator badge displays as it is locally hosted and can't update with the online Swagger UI dependencies thus constantly display an Error badge
 
 ## Contact and Enquiries
 
